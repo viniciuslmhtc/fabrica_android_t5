@@ -14,7 +14,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activities.EActivity"/>
+        <activity android:name=".activities.FActivity"/>
+        <activity android:name=".activities.GActivity"/>
 
     </application>
 
