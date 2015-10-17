@@ -9,6 +9,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.htcursos.htapp.R;
+import com.htcursos.htapp.models.User;
+import com.htcursos.htapp.utils.Constants;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -37,8 +39,12 @@ public class BActivity extends AppCompatActivity {
 
     @OnClick(R.id.btn_ok)
     public void login(){
-        if(login.getText().toString().equals("htcursos") && password.getText().toString().equals("123")){
+        User user = new User();
+        user.setLogin(login.getText().toString());
+        user.setPassword(password.getText().toString());
+        if(user.getLogin().equals("htcursos") && user.getPassword().equals("123")){
             startActivity(new Intent(BActivity.this, FActivity.class)
+                    .putExtra(Constants.EXTRA_FOR_F, user)
                     .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
         }else{
             resultText.setText("Login ou senha incorreto");

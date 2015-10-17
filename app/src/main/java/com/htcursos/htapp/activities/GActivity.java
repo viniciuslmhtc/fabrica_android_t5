@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.htcursos.htapp.R;
+import com.htcursos.htapp.utils.Constants;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -32,6 +33,11 @@ public class GActivity extends AppCompatActivity {
                 finish();
             }
         });
+        if(getIntent().getExtras().containsKey(Constants.EXTRA_FOR_G)){
+            //Qualquer das formas
+//           text.setText(getIntent().getExtras().getString(Constants.EXTRA_FOR_G));
+            text.setText(getIntent().getStringExtra(Constants.EXTRA_FOR_G));
+        }
     }
 
 }
