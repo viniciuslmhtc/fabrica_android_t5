@@ -7,6 +7,10 @@ import java.io.Serializable;
  */
 public class User implements Serializable {
 
+    private String name;
+
+    private int image;
+
     private String login;
 
     private String password;
@@ -26,4 +30,21 @@ public class User implements Serializable {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getImage() {
+        return image;
+    }
+
+    public void setImage(int image) {
+        this.image = image;
+    }
+
 }
