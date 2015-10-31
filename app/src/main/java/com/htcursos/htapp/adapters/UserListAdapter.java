@@ -45,7 +45,7 @@ public class UserListAdapter extends ArrayAdapter<User> {
     }
 
 
-    public class ViewHolder {
+    class ViewHolder {
 
         @Bind(R.id.user_image)
         ImageView userImage;

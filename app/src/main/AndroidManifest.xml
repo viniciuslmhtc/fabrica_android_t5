@@ -7,7 +7,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".activities.UserListActivity">
+        <activity android:name=".activities.CameraExtraActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -16,6 +16,7 @@
 
         <activity android:name=".activities.FActivity"/>
         <activity android:name=".activities.GActivity"/>
+        <activity android:name=".activities.UserInfoActivity"/>
 
     </application>
 

@@ -1,5 +1,7 @@
 package com.htcursos.htapp.models;
 
+import android.graphics.Bitmap;
+
 import java.io.Serializable;
 
 /**
@@ -14,6 +16,16 @@ public class User implements Serializable {
     private String login;
 
     private String password;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    private String email;
 
     public String getLogin() {
         return login;

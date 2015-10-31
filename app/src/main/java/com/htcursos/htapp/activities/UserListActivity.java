@@ -2,7 +2,11 @@ package com.htcursos.htapp.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
+
 import com.htcursos.htapp.R;
 import com.htcursos.htapp.adapters.UserListAdapter;
 import com.htcursos.htapp.models.User;
@@ -43,7 +47,14 @@ public class UserListActivity extends AppCompatActivity {
         users.add(user2);
         users.add(user3);
         users.add(user4);
-        UserListAdapter adapter  = new UserListAdapter(this, users);
+        final UserListAdapter adapter  = new UserListAdapter(this, users);
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(UserListActivity.this, adapter.getItem(position).getName(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 }
