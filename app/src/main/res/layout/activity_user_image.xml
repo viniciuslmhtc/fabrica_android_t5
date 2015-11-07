@@ -8,7 +8,7 @@
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_centerInParent="true"
-        android:src="@drawable/ic_profile_noavatar"/>
+        android:src="@drawable/ic_profile_noavatar" />
 
     <TextView
         android:layout_width="wrap_content"
